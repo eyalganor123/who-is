@@ -1,4 +1,3 @@
-
 body {
   display: flex;
   min-height: 100vh;
@@ -8,24 +7,25 @@ body {
 
 header {
   text-align: center;
-  color:#f3db04;
+  color: #f3db04;
   font-size: .1em;
-  flex  : 1;
+  flex: 1;
 }
-img{
-  display:flex;
-  height:50vh;
+
+img {
+  display: flex;
+  height: 50vh;
   justify-content: center;
   align-items: center;
   opacity: 0.9;
-  z-index:-1
+  z-index: -1
 }
 
 footer {
-  background-color:  black;
+  background-color: black;
   text-align: center;
-  color:lightblue;
-  
+  color: lightblue;
+
 }
 
 main {
@@ -35,13 +35,48 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size:1em;
-}
-h2{
-  color:white;
+  font-size: 1em;
 }
 
+h2 {
+  color: white;
+  font-size: 2em;
+}
 
+.text-focus-in {
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
 
+.h1 {
+  color: rgb(235, 205, 109);
+  font-size: 30em;
+}
 
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
 
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

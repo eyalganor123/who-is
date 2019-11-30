@@ -10,17 +10,12 @@ function onStartGuessing() {
     $('.game-start').hide();
     renderQuest();
     $(".quest").show();
-
-    // TODO: show the quest section
 }
 
 function renderQuest() {
     $(".quest-title").text((gCurrQuest.txt));
     $(".h1").text('Who is?');
 
-
-    // var elH2 = document.querySelector('.quest-title');
-    // elH2.innerText = gCurrQuest.txt
 }
 
 function onUserResponse(res) {
@@ -58,12 +53,11 @@ function onAddGuess() {
 
 }
 
-
 function onRestartGame() {
+
+    $('.quest').hide();
     $('.new-quest').hide();
     $('.game-start').show();
-    resetGlobals();
-
-    //TODO: reset the lastRes to null
-
+    localStorage.clear("gQTRee");
+    init();
 }

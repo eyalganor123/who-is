@@ -39,8 +39,6 @@ function setLastRes(res) {
 }
 
 function addGuess(newQuestTxt, newGuessTxt) {
-    console.log('gPrev', gPrevQuest);
-    console.log('gLastRes', gLastRes);
     var newGuess = createQuest(newGuessTxt);
     var newQuest = createQuest(newQuestTxt);
     newGuess.yes = newQuest;
@@ -52,18 +50,14 @@ function addGuess(newQuestTxt, newGuessTxt) {
 
     }
 
-    console.log(gQuestsTree);
 }
 
 function resetGlobals() {
     gLastRes = null;
     gCurrQuest = gQuestsTree;
-    console.log(gQuestsTree);
 }
 
 function resetNewGlobals() {
-    // gLastRes = null;
-    // gPrevQuest=gCurrQuest;
     gCurrQuest = gQuestsTree;
-    console.log(gQuestsTree);
+    gLastRes = ''
 }

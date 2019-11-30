@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>WhoIs?</title>
-  <link rel='icon' href='./img/layout/favicon.ico' type='image/x-icon'/>
+  <link rel='icon' href='./img/layout/favicon.ico' type='image/x-icon' />
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="css/app.css" />
 </head>
@@ -13,7 +13,7 @@
 
   <header class="box flex-grow-3 bd-highlight">
     <img src="img/layout/logo2.png" />
-    <h1 class="tracking-in-contract h1">Who Is?</h1>
+    <h1 class="text-focus-in h1">Who Is?</h1>
   </header>
 
   <main>
@@ -23,7 +23,7 @@
     </section>
     <section class="quest" style="display: none">
       <h2 class="quest-title"></h2>
-      <button onclick="onUserResponse('yes',event)" class="btn btn-info">Yes</button>
+      <button onclick="onUserResponse('yes',event)" class="btn btn-info btn btn-sq btn-primary large">Yes</button>
       <button onclick="onUserResponse('no')" class="btn btn-danger">No</button>
     </section>
     <section class="new-quest" style="display: none">
@@ -51,7 +51,9 @@
         </div>
       </form>
     </section>
+
   </main>
+  <button class="restart btn  btn-outline-warning" onclick="onRestartGame()">restart</button>
 
   <footer>
     return gAnswer &copy; 2020
